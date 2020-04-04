@@ -18,7 +18,7 @@
     "alwaysStrict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "types": ["react", "react-native", "jest"],
+    "types": ["react", "react-native", "jest", "react-navigation"],
     "baseUrl": "./",
     "paths": {
       "src/*": ["src/*"]

@@ -20,6 +20,9 @@
 		839F3F1F42B4A38FA7B40E7F /* libPods-PhotoMonks-PhotoMonksTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B092D326A54536E238AC967F /* libPods-PhotoMonks-PhotoMonksTests.a */; };
 		9E2EA41088466386790A4155 /* libPods-PhotoMonks-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE78B19A7DC26B13419F087F /* libPods-PhotoMonks-tvOS.a */; };
 		C61554486936A5EF5F7EC5CA /* libPods-PhotoMonks-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2F1831736A3C2529816949 /* libPods-PhotoMonks-tvOSTests.a */; };
+		BB305E91D33441CB95FDB34B /* klavika-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3AB65C7A772A4DE6891FEED2 /* klavika-bold.ttf */; };
+		7AFAD03956094C8F8F3FD259 /* klavika-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A4BE4B4966640CA9E8DC42F /* klavika-light.ttf */; };
+		D7CD6089F1D24E77AAD5C815 /* klavika-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE114A4B96E14E7688D02D0A /* klavika-medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +49,7 @@
 		00E356F21AD99517003FC87E /* PhotoMonksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoMonksTests.m; sourceTree = "<group>"; };
 		0E2CD8693ADB271D106241D1 /* Pods-PhotoMonks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoMonks.debug.xcconfig"; path = "Target Support Files/Pods-PhotoMonks/Pods-PhotoMonks.debug.xcconfig"; sourceTree = "<group>"; };
 		11C5CA413410E804605F3B66 /* Pods-PhotoMonks-PhotoMonksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoMonks-PhotoMonksTests.release.xcconfig"; path = "Target Support Files/Pods-PhotoMonks-PhotoMonksTests/Pods-PhotoMonks-PhotoMonksTests.release.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* PhotoMonks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoMonks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Photo Monks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Monks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PhotoMonks/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PhotoMonks/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -67,6 +70,9 @@
 		D6AB261B5385FF136FD6170B /* Pods-PhotoMonks-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoMonks-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-PhotoMonks-tvOSTests/Pods-PhotoMonks-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		3AB65C7A772A4DE6891FEED2 /* klavika-bold.ttf */ = {isa = PBXFileReference; name = "klavika-bold.ttf"; path = "../assets/fonts/klavika-bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9A4BE4B4966640CA9E8DC42F /* klavika-light.ttf */ = {isa = PBXFileReference; name = "klavika-light.ttf"; path = "../assets/fonts/klavika-light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE114A4B96E14E7688D02D0A /* klavika-medium.ttf */ = {isa = PBXFileReference; name = "klavika-medium.ttf"; path = "../assets/fonts/klavika-medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E9E5EBEB4FD52E47047F4F4E /* Pods */,
+				9329E39DD7854B82AC1A0AD2 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -174,7 +181,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* PhotoMonks.app */,
+				13B07F961A680F5B00A75B9A /* Photo Monks.app */,
 				00E356EE1AD99517003FC87E /* PhotoMonksTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* PhotoMonks-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* PhotoMonks-tvOSTests.xctest */,
@@ -196,6 +203,17 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		9329E39DD7854B82AC1A0AD2 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				3AB65C7A772A4DE6891FEED2 /* klavika-bold.ttf */,
+				9A4BE4B4966640CA9E8DC42F /* klavika-light.ttf */,
+				DE114A4B96E14E7688D02D0A /* klavika-medium.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -236,7 +254,7 @@
 			);
 			name = PhotoMonks;
 			productName = PhotoMonks;
-			productReference = 13B07F961A680F5B00A75B9A /* PhotoMonks.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Photo Monks.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D02E47A1E0B4A5D006451C7 /* PhotoMonks-tvOS */ = {
@@ -339,6 +357,9 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				BB305E91D33441CB95FDB34B /* klavika-bold.ttf in Resources */,
+				7AFAD03956094C8F8F3FD259 /* klavika-light.ttf in Resources */,
+				D7CD6089F1D24E77AAD5C815 /* klavika-medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,7 +663,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = photo.monks.app;
-				PRODUCT_NAME = PhotoMonks;
+				PRODUCT_NAME = "Photo Monks";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -664,7 +685,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = photo.monks.app;
-				PRODUCT_NAME = PhotoMonks;
+				PRODUCT_NAME = "Photo Monks";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

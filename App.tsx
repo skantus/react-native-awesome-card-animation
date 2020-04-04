@@ -29,11 +29,7 @@ const App: () => React.ReactNode = () => {
           style={styles.scrollView}>
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to
-              </Text>
+              <Text style={styles.sectionTitle}>NEW YORK</Text>
             </View>
 
             <Home name="Alejo" />
@@ -60,15 +56,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   sectionTitle: {
+    marginTop: 20,
+    fontFamily: 'klavika-bold',
     fontSize: 24,
-    fontWeight: '600',
+    fontWeight: '400',
     color: Colors.black,
   },
   sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
+    fontFamily: 'klavika-bold',
+    lineHeight: 21,
+    fontSize: 30,
+    textAlign: 'center',
+    margin: 10,
   },
   highlight: {
     fontWeight: '700',
