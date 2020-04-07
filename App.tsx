@@ -7,4 +7,5 @@ const App: () => React.ReactNode = () => {
 
 export default App;
 
-console.ignoredYellowBox = ['ReactNativeFiberHostComponent', '`getNode()`'];
+// Disabled yellow box from core RN lib.
+console.disableYellowBox = true;
