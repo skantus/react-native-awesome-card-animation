@@ -12,6 +12,7 @@ type Props = {
   onItemPress: (arg0: Card) => void;
 };
 
+const PHASE_0 = 'phase-0';
 let sharedElementRefs: {[key: string]: {moveToDestination: () => void}} = {};
 
 const List = (props: Props) => {
@@ -71,7 +72,7 @@ const List = (props: Props) => {
 
   return (
     <View style={styles.container}>
-      <Header isHidden={phase !== 'phase-0'} />
+      <Header isHidden={phase !== PHASE_0} />
       <FlatList
         data={data}
         showsVerticalScrollIndicator={false}

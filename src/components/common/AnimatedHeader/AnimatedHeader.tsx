@@ -12,7 +12,7 @@ const SHOW = -50;
 const DURATION = 500;
 const translateY: AnimatedValue = new Animated.Value(HIDE);
 
-const AnimatedHeader = ({isHidden}: Props): React.ReactNode => {
+const AnimatedHeader = ({isHidden}: Props) => {
   const animate = (): void => {
     Animated.timing(translateY, {
       toValue: isHidden ? HIDE : SHOW,

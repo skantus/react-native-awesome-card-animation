@@ -17,6 +17,7 @@ type Props = {
 
 const PHASE_2 = 'phase-2';
 const PHASE_3 = 'phase-3';
+const LIGHT_CONTENT = 'light-content';
 const TRANSITION_TIME = 56;
 let enabledRef = true;
 
@@ -64,7 +65,7 @@ const Detail = (props: Props) => {
   handleMoveToSource();
   return props.selectedItem ? (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle={LIGHT_CONTENT} />
       <Header
         isHidden={props.phase === PHASE_3}
         onBackPress={props.onBackPress}
