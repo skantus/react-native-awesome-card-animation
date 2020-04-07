@@ -5,11 +5,7 @@ import styles from './styles';
 
 type Props = {
   isHidden: boolean;
-  item: {
-    title: string;
-    description: string;
-    imageUri: string;
-  };
+  item: Card;
   animateOnDidMount?: boolean;
   onPress?: (arg0: Card, arg1: boolean) => void;
 };

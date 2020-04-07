@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {View, FlatList, Easing} from 'react-native';
+import {withNavigation} from 'react-navigation';
+import {NavigationStackScreenProps} from 'react-navigation-stack';
 import {SharedElement} from 'react-native-motion';
 import Header from './Header';
 import Card from 'src/components/common/Card';
@@ -15,7 +17,7 @@ type Props = {
 const PHASE_0 = 'phase-0';
 let sharedElementRefs: {[key: string]: {moveToDestination: () => void}} = {};
 
-const List = (props: Props) => {
+const List = (props: Props & NavigationStackScreenProps) => {
   const [opacityOfSelectedItem, setOpacityOfSelectedItem] = useState(1);
 
   const onListItemPressed = (item: Card) => {
@@ -72,7 +74,10 @@ const List = (props: Props) => {
 
   return (
     <View style={styles.container}>
-      <Header isHidden={phase !== PHASE_0} />
+      <Header
+        isHidden={phase !== PHASE_0}
+        onPress={() => props.navigation.navigate('ProfileTab')}
+      />
       <FlatList
         data={data}
         showsVerticalScrollIndicator={false}
@@ -84,4 +89,4 @@ const List = (props: Props) => {
   );
 };
 
-export default List;
+export default withNavigation(List);

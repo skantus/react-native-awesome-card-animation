@@ -10,7 +10,7 @@ import {withNavigation, tabIcon} from './utils';
 const HomeNavigator = createStackNavigator(
   {
     Home: {
-      screen: withNavigation(() => <HomeContainer />),
+      screen: HomeContainer,
     },
   },
   {
@@ -35,13 +35,16 @@ const TabNavigator = createBottomTabNavigator(
       },
     },
     ProfileTab: {
-      screen: ProfileContainer,
+      screen: withNavigation(({navigation}) => (
+        <ProfileContainer onGoBack={navigation.goBack} />
+      )),
       navigationOptions: {
         tabBarIcon: tabIcon(require('src/images/profileIcon.png'), 'Profile'),
       },
     },
   },
   {
+    initialRouteName: 'HomeTab',
     tabBarComponent: TabBar,
   },
 );
