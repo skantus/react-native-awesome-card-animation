@@ -11,19 +11,19 @@ type Props = {
     imageUri: string;
   };
   animateOnDidMount?: boolean;
-  onPress: (arg0: Card, arg1: boolean) => void;
+  onPress?: (arg0: Card, arg1: boolean) => void;
 };
 
 const Card = (props: Props) => {
   const onPressed = (event: any) => {
     const {onPress, item} = props;
-    onPress(item, event.nativeEvent);
+    onPress && onPress(item, event?.nativeEvent);
   };
 
   const {item, isHidden, animateOnDidMount} = props;
   return (
     <ScaleAndOpacity isHidden={isHidden} animateOnDidMount={animateOnDidMount}>
-      <TouchableOpacity onPress={onPressed}>
+      <TouchableOpacity onPress={onPressed} disabled={!props.onPress}>
         <ImageBackground
           source={{uri: item?.imageUri}}
           style={styles.container}
