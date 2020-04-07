@@ -40,7 +40,7 @@ const TabBar = (props: Props & NavigationStackScreenProps) => {
 
   const startAnimation = () => {
     const activeRoute = getActiveRouteState(props.navigation.state);
-    const routesWithoutTabBar = ['Albums', 'Photos'];
+    const routesWithoutTabBar = ['Home'];
     handleBounce(
       routesWithoutTabBar.includes(activeRoute.routeName)
         ? HIDE_ANIMATION
