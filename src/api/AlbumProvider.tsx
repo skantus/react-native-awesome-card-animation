@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import AlbumContext from 'src/store/AlbumContext';
 import data from 'src/api/data/data';
 import API from 'src/api/API';
@@ -7,25 +7,33 @@ type Props = {
   children: any;
 };
 
+type State = {
+  photos: CardItem[];
+};
+
 const BASE_API = 'https://jsonplaceholder.typicode.com/';
 
-const AlbumProvider = (props: Props) => {
-  const [photos, setPhotos] = useState([]);
+class AlbumProvider extends React.Component<Props> {
+  state = {
+    photos: [],
+  } as State;
 
-  useEffect(() => {
-    getData();
-  });
+  componentDidMount() {
+    this.getData();
+  }
 
-  const getData = async () => {
-    const response = await API.get({url: `${BASE_API}albums/1/photos`});
-    setPhotos(response);
+  getData = async () => {
+    const photos = await API.get({url: `${BASE_API}albums/1/photos`});
+    this.setState({photos});
   };
 
-  return (
-    <AlbumContext.Provider value={{data, photos}}>
-      {props.children}
-    </AlbumContext.Provider>
-  );
-};
+  render() {
+    return (
+      <AlbumContext.Provider value={{data, photos: this.state.photos}}>
+        {this.props.children}
+      </AlbumContext.Provider>
+    );
+  }
+}
 
 export default AlbumProvider;
