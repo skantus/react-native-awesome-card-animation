@@ -4,7 +4,7 @@ import {AnimatedValue} from 'react-navigation';
 
 type Props = {
   isHidden: boolean;
-  children: React.ReactNode;
+  children: any;
 };
 
 const SHOW = 1;

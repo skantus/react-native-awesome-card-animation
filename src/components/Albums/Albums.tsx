@@ -4,6 +4,7 @@ import {SafeAreaView} from 'react-navigation';
 import StatusBar from '@react-native-community/status-bar';
 import {SharedElementRenderer} from 'react-native-motion';
 import AnimatedHeader from 'src/components/common/AnimatedHeader';
+import AlbumProvider from 'src/api/AlbumProvider';
 import List from './List';
 import Detail from './Detail';
 import styles from './styles';
@@ -50,24 +51,26 @@ const Albums = () => {
         <View style={styles.content}>
           <AnimatedHeader isHidden={phase !== PHASE_1 && phase !== PHASE_2} />
           <View style={styles.container}>
-            <List
-              selectedItem={selectedItem}
-              onItemPress={onItemPressed}
-              phase={phase}
-              theme={null}
-              screenProps={null}
-            />
-            <Detail
-              phase={phase}
-              selectedItem={selectedItem}
-              onBackPress={onBackPressed}
-              onSharedElementMovedToDestination={
-                onSharedElementMovedToDestination
-              }
-              onSharedElementMovedToSource={onSharedElementMovedToSource}
-              theme={null}
-              screenProps={null}
-            />
+            <AlbumProvider>
+              <List
+                selectedItem={selectedItem}
+                onItemPress={onItemPressed}
+                phase={phase}
+                theme={null}
+                screenProps={null}
+              />
+              <Detail
+                phase={phase}
+                selectedItem={selectedItem}
+                onBackPress={onBackPressed}
+                onSharedElementMovedToDestination={
+                  onSharedElementMovedToDestination
+                }
+                onSharedElementMovedToSource={onSharedElementMovedToSource}
+                theme={null}
+                screenProps={null}
+              />
+            </AlbumProvider>
           </View>
         </View>
       </SafeAreaView>

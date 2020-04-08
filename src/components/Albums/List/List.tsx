@@ -5,7 +5,7 @@ import {NavigationStackScreenProps} from 'react-navigation-stack';
 import {SharedElement} from 'react-native-motion';
 import Header from './Header';
 import Card from 'src/components/common/Card';
-import data from 'src/api/data/data';
+import AlbumContext from 'src/store/AlbumContext';
 import styles from './styles';
 
 type Props = {
@@ -73,19 +73,25 @@ const List = (props: Props & NavigationStackScreenProps) => {
   const {phase} = props;
 
   return (
-    <View style={styles.container}>
-      <Header
-        isHidden={phase !== PHASE_0}
-        onPress={() => props.navigation.navigate('ProfileTab')}
-      />
-      <FlatList
-        data={data}
-        showsVerticalScrollIndicator={false}
-        extraData={{phase, opacityOfSelectedItem}}
-        keyExtractor={(item) => item.title}
-        renderItem={renderItem}
-      />
-    </View>
+    <AlbumContext.Consumer>
+      {(context) => {
+        return (
+          <View style={styles.container}>
+            <Header
+              isHidden={phase !== PHASE_0}
+              onPress={() => props.navigation.navigate('ProfileTab')}
+            />
+            <FlatList
+              data={context.data}
+              showsVerticalScrollIndicator={false}
+              extraData={{phase, opacityOfSelectedItem}}
+              keyExtractor={(item) => item.title}
+              renderItem={renderItem}
+            />
+          </View>
+        );
+      }}
+    </AlbumContext.Consumer>
   );
 };
 

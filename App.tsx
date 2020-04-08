@@ -1,7 +1,7 @@
 import React from 'react';
 import AppNavigator from 'src/components/AppNavigator';
 
-const App: () => React.ReactNode = () => {
+const App = () => {
   return <AppNavigator />;
 };
 
