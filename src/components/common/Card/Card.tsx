@@ -21,7 +21,7 @@ const Card = (props: Props) => {
     <ScaleAndOpacity isHidden={isHidden} animateOnDidMount={animateOnDidMount}>
       <TouchableOpacity onPress={onPressed} disabled={!props.onPress}>
         <ImageBackground
-          source={{uri: item?.imageUri}}
+          source={item?.imageUri}
           style={styles.container}
           imageStyle={styles.image}>
           <Text style={styles.title}>{item?.title}</Text>

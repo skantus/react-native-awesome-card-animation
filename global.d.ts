@@ -8,7 +8,7 @@ type NavigationProps = {
 interface Card {
   id: number | string;
   title: string;
-  imageUri: string;
+  imageUri: ImageURISource;
   description: string;
   items?: CardItem[];
 }
