@@ -54,6 +54,8 @@ const Albums = () => {
               selectedItem={selectedItem}
               onItemPress={onItemPressed}
               phase={phase}
+              theme={null}
+              screenProps={null}
             />
             <Detail
               phase={phase}
@@ -63,6 +65,8 @@ const Albums = () => {
                 onSharedElementMovedToDestination
               }
               onSharedElementMovedToSource={onSharedElementMovedToSource}
+              theme={null}
+              screenProps={null}
             />
           </View>
         </View>

@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import {Easing, Text, View, FlatList} from 'react-native';
+import {Easing, Text, View, FlatList, TouchableOpacity} from 'react-native';
+import {withNavigation} from 'react-navigation';
+import {NavigationStackScreenProps} from 'react-navigation-stack';
 import StatusBar from '@react-native-community/status-bar';
 import {SharedElement, TranslateYAndOpacity} from 'react-native-motion';
 import Avatar from 'src/components/common/Avatar';
@@ -21,7 +23,7 @@ const LIGHT_CONTENT = 'light-content';
 const TRANSITION_TIME = 56;
 let enabledRef = true;
 
-const Detail = (props: Props) => {
+const Detail = (props: Props & NavigationStackScreenProps) => {
   const [opacityOfDestinationItem, setOpacityOfDestinationItem] = useState(0);
   const [sharedElementRef, setSharedElementRef] = useState(null);
   const {items = []} = props.selectedItem || {};
@@ -44,10 +46,14 @@ const Detail = (props: Props) => {
           TRANSITION_TIME *
           (phase === PHASE_3 ? selectedItem.items.length - index : index)
         }>
-        <View style={[styles.itemContainer, styles.item]}>
+        <TouchableOpacity
+          style={[styles.itemContainer, styles.item]}
+          onPress={() =>
+            props.navigation.navigate('PhotoDetail', {cardItem: item})
+          }>
           <Avatar imageUri={{uri: item.url}} />
           <Text style={styles.titleText}>{item.name}</Text>
-        </View>
+        </TouchableOpacity>
       </TranslateYAndOpacity>
     );
   };
@@ -113,4 +119,4 @@ const Detail = (props: Props) => {
   ) : null;
 };
 
-export default Detail;
+export default withNavigation(Detail);

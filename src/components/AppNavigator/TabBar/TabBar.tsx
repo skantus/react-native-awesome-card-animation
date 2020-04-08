@@ -58,7 +58,6 @@ const TabBar = (props: Props & NavigationStackScreenProps) => {
     return (
       <View style={style.tabBar}>
         {navState.routes.map((route: {routeName: string}, idx: number) => {
-          // TODO: use theme colors
           const color = navState.index === idx ? 'white' : 'gray';
           return (
             <TouchableOpacity
