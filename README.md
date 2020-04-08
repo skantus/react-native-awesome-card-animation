@@ -24,7 +24,7 @@ We know it's a short time span, and you'll be working on it in your spare time, 
 - Created common components (header, avatar, card, navigationBar, animated views, etc).
 - Added smart components.
 - Added ReactContext (store).
-- Created API Anuncios RESTful service.
+- Created API RESTful service.
 - and more..
 
 <p align="center">
