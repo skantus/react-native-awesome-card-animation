@@ -22,6 +22,8 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 18,
     fontFamily: 'klavika-light',
+    marginLeft: 10,
+    width: '70%',
   },
   description: {
     paddingLeft: 10,

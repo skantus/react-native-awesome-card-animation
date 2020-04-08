@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 18,
-    fontFamily: 'klavika-bold',
+    fontFamily: 'klavika-light',
   },
   avatar: {
     width: AVATAR_SIZE,

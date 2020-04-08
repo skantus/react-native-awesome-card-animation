@@ -12,8 +12,11 @@ const PhotoDetail = (props: NavigationStackScreenProps) => {
     <SafeAreaView style={styles.container}>
       <NavigationBar onGoBack={props.navigation.goBack} />
       <View style={styles.content}>
-        <Avatar imageUri={{uri: cardItem?.url}} style={styles.avatar} />
-        <Text style={styles.text}>{cardItem?.name}</Text>
+        <Avatar
+          imageUri={{uri: cardItem?.thumbnailUrl}}
+          style={styles.avatar}
+        />
+        <Text style={styles.text}>{cardItem?.title}</Text>
       </View>
     </SafeAreaView>
   );

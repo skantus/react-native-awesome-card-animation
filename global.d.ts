@@ -14,6 +14,6 @@ interface Card {
 }
 
 interface CardItem {
-  name: string;
-  url: string;
+  title: string;
+  thumbnailUrl: string;
 }

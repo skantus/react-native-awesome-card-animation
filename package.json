@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.7",
     "@react-native-community/status-bar": "^1.0.3",
+    "http-status-codes": "^1.4.0",
     "react": "16.11.0",
     "react-native": "0.62.1",
     "react-native-gesture-handler": "^1.6.1",

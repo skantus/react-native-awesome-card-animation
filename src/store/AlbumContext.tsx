@@ -1,5 +1,5 @@
 import React from 'react';
 
-const AlbumContent = React.createContext(null);
+const AlbumContext = React.createContext(null);
 
-export default AlbumContent;
+export default AlbumContext;
