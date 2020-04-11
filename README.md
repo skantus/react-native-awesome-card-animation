@@ -23,8 +23,10 @@ We know it's a short time span, and you'll be working on it in your spare time, 
 - Created navigation structure.
 - Created common components (header, avatar, card, navigationBar, animated views, etc).
 - Added smart components.
+- Fluid animations and beautiful UX/UI.
 - Added ReactContext (store).
 - Created API RESTful service.
+- Local database using Realm.
 - and more..
 
 <p align="center">
@@ -33,4 +35,8 @@ We know it's a short time span, and you'll be working on it in your spare time, 
 
 <p align="center">
   <img src="https://github.com/skantus/photo-monks/blob/master/src/images/screenshots/screenshot.png" width="800"/>  
+</p>
+
+<p align="center">
+  <img src="https://github.com/skantus/photo-monks/blob/master/src/images/screenshots/realm.png" width="800"/>  
 </p>
