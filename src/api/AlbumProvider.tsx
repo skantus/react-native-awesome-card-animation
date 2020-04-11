@@ -40,12 +40,14 @@ class AlbumProvider extends React.Component<Props> {
       const realm = await Realm.open(photoDetailOptions);
       let photos: CardItem[] = [];
 
+      // get the data from local database
       photos = realmObjectsToJson(realm.objects(PHOTO_DETAIL_SCHEMA));
       if (photos?.length > 0) {
         this.setState({photos, realm});
         return;
       }
 
+      // get the data from remote server
       photos = await API.get({url: `${BASE_API}${PHOTOS_URL}`});
       realm.write(() => {
         photos?.map((item: CardItem) => {

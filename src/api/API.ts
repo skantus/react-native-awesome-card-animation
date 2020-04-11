@@ -22,7 +22,7 @@ async function httpRequest(
       headers: Headers;
       body: string;
     } = {method, headers, body};
-    let response = await fetch(url, options);
+    const response = await fetch(url, options);
     if (response.status === UNAUTHORIZED) {
       throw new Error('Error 401: unauthenticated user');
     }
