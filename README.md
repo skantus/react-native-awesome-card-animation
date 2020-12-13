@@ -14,6 +14,8 @@ https://jsonplaceholder.typicode.com
   <img src="https://github.com/skantus/photo-monks/blob/master/src/images/screenshots/screenshot.png" width="800"/>  
 </p>
 
+### Data persistence (Realm):
+
 <p align="center">
   <img src="https://github.com/skantus/photo-monks/blob/master/src/images/screenshots/realm.png" width="800"/>  
 </p>
